@@ -1,21 +1,21 @@
 # Document Scanner & OCR Text Extractor
 
-A Computer Vision project that converts document images into clean scanned documents and extracts text using OCR.
+A Computer Vision-based project that transforms document images into clean, scanned documents and extracts their text using OCR.
 
-**Author:** Mohit Poonia  
-**Registration No.:** 24BAI10966  
+**Author:** ARYAN
+**Registration No.:** 24BAI10586
 **Course:** Computer Vision
 
 ## Features
 
-- Detects documents from images using OpenCV.
-- Corrects perspective and enhances the scanned document.
-- Extracts text using EasyOCR.
-- Filters OCR results using confidence scores.
-- Exports results as PNG, TXT, JSON and PDF.
-- Supports single-image and batch processing.
+* Detects documents in images using OpenCV.
+* Performs perspective correction and improves the scanned document.
+* Extracts text from documents using EasyOCR.
+* Filters OCR results based on confidence scores.
+* Saves the generated results in PNG, TXT, JSON, and PDF formats.
+* Supports both single-image and batch image processing.
 
-## Technologies
+## Technologies Used
 
 Python, OpenCV, NumPy, EasyOCR, FPDF2, Pytest
 
@@ -31,32 +31,51 @@ Document_scanner_using_ocr/
 ├── README.md
 ├── requirements.txt
 └── statement.md
-Setup
+```
+
+## Setup
+
+Clone the repository and install the required dependencies:
+
+```bash
 git clone https://github.com/mohitpoonia21/Document_scanner_using_ocr.git
 cd Document_scanner_using_ocr
 pip install -r requirements.txt
-Run
+```
 
-Place a document image inside the input folder and run:
+## Run
 
+Place a document image in the `input` folder and run:
+
+```bash
 python -m src.cli --input input/your_document.jpg --output output
+```
 
-For multiple images:
+For processing multiple images at once:
 
+```bash
 python -m src.cli --input-dir input --output output
-Testing
+```
+
+## Testing
+
+Run the test suite using:
+
+```bash
 pytest -q
+```
 
-Result: 13 tests passed
+**Result:** 13 tests passed
 
-Output
+## Output
 
-The application can generate:
+The application can generate the following files:
 
-document_scan.png
-document.txt
-document.json
-document.pdf
-Note
+* `document_scan.png`
+* `document.txt`
+* `document.json`
+* `document.pdf`
 
-The complete OCR stage requires EasyOCR and its model files. During development, the OCR wrapper was tested using mocks because the required package/model download was unavailable in the testing environment.
+## Note
+
+The complete OCR process requires EasyOCR along with its model files. During development, the OCR wrapper was tested with mocks because the required package and model download were not available in the testing environment.
