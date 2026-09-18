@@ -1,86 +1,85 @@
-# `statement.md`
-
 # Project Statement
 
 ## Document Scanner Using OCR
 
-**Name:** Mohit Poonia  
-**Registration No.:** 24BAI10966  
+**Name:** ARYAN
+**Registration No.:** 24BAI10586
 **Domain:** Computer Vision
 
 ## Problem Statement
 
-Photographs of documents may contain tilted pages, unwanted backgrounds, uneven lighting, and other distortions. These issues can make the image difficult to use as a scanned document and can also affect text recognition.
+Images of documents can often have problems such as tilted pages, unnecessary backgrounds, uneven illumination, and other distortions. These problems can reduce the quality of the document image and may also interfere with accurate text recognition.
 
-The aim of this project is to develop a simple document scanner that detects a document from an image, corrects its perspective, improves the scanned image, and extracts its text using OCR.
+The objective of this project is to create a simple document scanner that can identify a document in an image, correct its perspective, enhance the scanned output, and extract the text using OCR technology.
 
 ## Proposed Solution
 
-The project is implemented in Python using OpenCV and EasyOCR. It is divided into three main modules.
+The project is developed in Python using OpenCV and EasyOCR. The complete system is organized into three primary modules.
 
 ### Module 1 — Preprocessing
 
-The system validates the input image, detects document edges and boundaries, identifies the document corners, corrects the perspective, and enhances the resulting scan.
+The system first validates the input image, identifies the document's edges and boundaries, detects its four corners, performs perspective correction, and enhances the final scanned image.
 
 ### Module 2 — OCR
 
-The processed document is passed to EasyOCR for text extraction. OCR results are stored with confidence values, and low-confidence results can be filtered using a selected threshold.
+The enhanced document image is provided to EasyOCR for text recognition. The extracted OCR data is stored along with confidence scores, allowing results with low confidence to be removed based on a specified threshold.
 
 ### Module 3 — Export
 
-The processed scan and OCR results are exported as PNG, TXT, JSON, and PDF files. The system also maintains a pipeline log.
+The processed document and extracted OCR information can be saved in PNG, TXT, JSON, and PDF formats. The system also keeps a log of important pipeline activities.
 
 ## Functional Requirements
 
-1. The system should accept and validate supported image files.
-2. It should detect and straighten the document using Computer Vision techniques.
-3. It should extract text using EasyOCR.
-4. It should allow OCR confidence filtering.
-5. It should export the processed results in multiple formats.
-6. It should handle common processing errors clearly.
+1. The system must accept and validate supported image formats.
+2. It must detect the document and correct its orientation using Computer Vision methods.
+3. It must extract document text through EasyOCR.
+4. It must provide an option to filter OCR results according to confidence scores.
+5. It must support exporting results in multiple file formats.
+6. It must provide clear handling of common input and processing errors.
 
 ## Non-Functional Requirements
 
-- **Performance:** Process normal document images within a reasonable time.
-- **Reliability:** Handle invalid input and processing failures properly.
-- **Usability:** Provide simple command-line options and clear messages.
-- **Maintainability:** Keep preprocessing, OCR, exporting, and utilities in separate modules.
-- **Testing:** Use automated tests to check important functions.
-- **Logging:** Record important pipeline events.
+* **Performance:** Process standard document images within a reasonable amount of time.
+* **Reliability:** Properly handle invalid inputs and processing errors.
+* **Usability:** Provide straightforward command-line options along with understandable messages.
+* **Maintainability:** Organize preprocessing, OCR, exporting, and utility functions into separate modules.
+* **Testing:** Use automated tests to verify important project functionality.
+* **Logging:** Maintain records of significant events during the processing pipeline.
 
 ## Technology Stack
 
-- Python
-- OpenCV
-- NumPy
-- EasyOCR
-- FPDF2
-- pytest
+* Python
+* OpenCV
+* NumPy
+* EasyOCR
+* FPDF2
+* pytest
 
 ## Testing
 
-The project contains automated tests for preprocessing and OCR functionality. The current test suite contains **13 tests**, and the development test run completed with:
+The project includes automated tests covering preprocessing and OCR-related functionality. The current test suite consists of **13 tests**, with the development test run producing:
 
 ```text
 13 passed
+```
 
-A synthetic document image was also used to check the preprocessing pipeline.
+A synthetic document image was additionally used to verify the preprocessing pipeline.
 
-Scope
+## Scope
 
-The project demonstrates a basic Computer Vision pipeline for document detection, perspective correction, image enhancement, OCR integration, and result export.
+This project demonstrates a basic Computer Vision workflow involving document detection, perspective transformation, image enhancement, OCR integration, and exporting of processed results.
 
-Future Scope
+## Future Scope
 
-The project can be extended with a graphical interface, camera capture, automatic orientation correction, improved document detection, additional OCR engines, and better PDF generation.
+The system can be further improved by adding a graphical user interface, camera-based document capture, automatic orientation detection, more advanced document detection methods, support for additional OCR engines, and enhanced PDF creation.
 
-Conclusion
+## Conclusion
 
-Document Scanner Using OCR demonstrates how image processing and OCR can be combined to convert a document photograph into a cleaner digital scan with extracted text. The modular structure also makes the project easier to test and extend.
+Document Scanner Using OCR demonstrates the integration of image processing and OCR techniques to transform a photograph of a document into a cleaner digital scan while also extracting its text. The modular design makes the system easier to test, maintain, and expand in the future.
 
-Declaration
+## Declaration
 
-I, Mohit Poonia, Registration No. 24BAI10966, submit this project as an academic Computer Vision project titled Document Scanner Using OCR.
+I, ARYAN, Registration No. 24BAI10586, submit this project as an academic Computer Vision project titled **Document Scanner Using OCR**.
 
-Name: Mohit Poonia
-Registration No.: 24BAI10966
+**Name:** ARYAN
+**Registration No.:** 24BAI10586
